@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "896709084015",
+    "project_id": "todo-793c2",
+    "storage_bucket": "todo-793c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896709084015:android:2161ac6d896fa805bb5e9a",
+        "android_client_info": {
+          "package_name": "com.cuneyt.mylist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvil_MpS08zT83vNt-Ho3Eun7IZH8vUJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
