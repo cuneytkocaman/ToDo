@@ -11,9 +11,17 @@
     <color name="grey_1">#DCE3E8</color>
     <color name="grey_2">#BAC3CA</color>
     <color name="grey_3">#41576E</color>
-    <color name="blue_grey">#0F1D22</color>
-    <color name="red">#C13838</color>
-    <color name="turquaz">#2DAC9F</color>
-    <color name="orange">#F58019</color>
-    <color name="yellow">#ffe000</color>
+
+
+    <color name="azur_1">#7F7FD5</color>
+    <color name="azur_2">#86A8E7</color>
+    <color name="azur_3">#7373CF</color>
+    <color name="turquaz">#91EAE4</color>
+    <color name="transparent">#00000000 </color>
+
+    <color name="green">#649173</color>
+    <color name="yellow">#DBD5A4</color>
+    <color name="blue_grey_1">#1A323A</color>
+    <color name="blue_grey_2">#0F1D22</color>
+
 </resources>

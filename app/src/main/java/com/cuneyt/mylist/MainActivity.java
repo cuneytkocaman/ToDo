@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +20,7 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTodo;
     private SearchView searchView;
     private ImageButton imgBtAdd;
+    private ConstraintLayout main, constBottomBar;
     private RecyclerView rvTodo;
     private FirebaseAuth firebaseAuth;
     private FirebaseUser firebaseUser;
@@ -63,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
         imgBtAdd = findViewById(R.id.imgBtAdd);
         rvTodo = findViewById(R.id.rvTodo);
         searchView = findViewById(R.id.searchView);
+        main = findViewById(R.id.main);
+        constBottomBar = findViewById(R.id.constBottomBar);
     }
 
     @Override
@@ -88,9 +93,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
+
             show();
 
-            rvSearch();
+         //   rvSearch();
 
             return insets;
         });
@@ -99,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
     public void addTodo(){
 
         if (TextUtils.isEmpty(editTodo.getText().toString())){
-            Toast.makeText(this, "Yapılacak giriniz.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Yazınız.", Toast.LENGTH_SHORT).show();
 
         } else {
 
@@ -180,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void rvSearch() { // RecyclerView Arama İşlemleri
+    /*public void rvSearch() { // RecyclerView Arama İşlemleri
 
         searchView.clearFocus();
 
@@ -208,5 +214,5 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-    }
+    }*/
 }

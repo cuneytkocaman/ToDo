@@ -8,26 +8,44 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constRow"
         android:layout_width="match_parent"
-        android:background="@drawable/bg_todo_row"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="3dp"
-        android:layout_marginBottom="3dp"
+        android:background="@drawable/bg_todo_row"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/textRvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/actor"
+            android:gravity="right|center_vertical"
+            android:text="TextView"
+            android:paddingRight="10dp"
+            android:textColor="@color/blue_grey_1"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/constRvTodo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/constRvTodo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constRvText"
+            android:id="@+id/constRvTodo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/constAlarm"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5"
-            app:layout_constraintWidth_percent=".8">
+            app:layout_constraintTop_toBottomOf="@+id/textRvDate"
+            app:layout_constraintWidth_percent=".9">
 
             <TextView
                 android:id="@+id/textRvTodo"
@@ -36,10 +54,11 @@
                 android:fontFamily="@font/actor"
                 android:gravity="center_vertical"
                 android:inputType="textMultiLine"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:text="TextView"
-                android:textColor="@color/blue_grey"
+                android:textColor="@color/blue_grey_2"
+                android:textSize="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -49,20 +68,28 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/textRvDate"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/actor"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="TextView"
-            android:textColor="@color/blue_grey"
-            android:textSize="12dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constAlarm"
+            android:layout_width="39dp"
+            android:layout_height="36dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/constRvText"
-            app:layout_constraintWidth_percent=".2" />
+            app:layout_constraintStart_toEndOf="@+id/constRvTodo"
+            app:layout_constraintTop_toBottomOf="@+id/textRvDate">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5"
+                app:srcCompat="@drawable/ic_alarm" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

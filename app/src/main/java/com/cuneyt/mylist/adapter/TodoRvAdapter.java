@@ -53,8 +53,7 @@ public class TodoRvAdapter extends RecyclerView.Adapter<TodoRvAdapter.MyViewHold
 
         holder.textRvTodo.setText(todo);
         holder.textRvDate.setText(creaDate);
-
-        hol
+        
     }
 
     @Override
