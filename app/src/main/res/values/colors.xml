@@ -24,4 +24,8 @@
     <color name="blue_grey_1">#1A323A</color>
     <color name="blue_grey_2">#0F1D22</color>
 
+    <color name="pink_0">#FFF7F8</color>
+    <color name="pink_1">#ffdde1</color>
+    <color name="pink_2">#ee9ca7</color>
+    <color name="burgundy">#1E0000</color>
 </resources>

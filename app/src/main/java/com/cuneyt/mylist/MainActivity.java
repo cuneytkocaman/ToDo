@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         searchView = findViewById(R.id.searchView);
         main = findViewById(R.id.main);
         constBottomBar = findViewById(R.id.constBottomBar);
+
     }
 
     @Override
@@ -92,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
                     addTodo();
                 }
             });
-
 
             show();
 

@@ -7,5 +7,5 @@
 
     <!--<gradient android:startColor="@color/yellow"/>-->
 
-    <solid android:color="@color/yellow" />
+    <solid android:color="@color/pink_0" />
 </shape>
