@@ -24,14 +24,14 @@
             android:layout_height="wrap_content"
             android:background="@color/transparent"
             android:ems="10"
-            android:fontFamily="@font/actor"
+            android:fontFamily="@font/baloo_bhai_2_medium"
             android:hint="Yaz..."
             android:inputType="textMultiLine"
             android:paddingLeft="5dp"
             android:paddingTop="5dp"
             android:paddingRight="5dp"
             android:paddingBottom="5dp"
-            android:textColor="@color/burgundy"
+            android:textColor="@color/white"
             android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imgBtAdd"
@@ -64,12 +64,12 @@
         android:id="@+id/constList"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layout_constraintWidth_percent=".97"
         app:layout_constraintBottom_toTopOf="@+id/constBottomBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constTopBar"
-        app:layout_constraintWidth_percent=".95">
+        app:layout_constraintTop_toBottomOf="@+id/constTopBar">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvTodo"

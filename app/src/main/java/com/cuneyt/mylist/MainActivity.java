@@ -26,6 +26,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.cuneyt.mylist.adapter.TodoRvAdapter;
 import com.cuneyt.mylist.assistantclass.DateTime;
@@ -105,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
     public void addTodo(){
 
         if (TextUtils.isEmpty(editTodo.getText().toString())){
-            Toast.makeText(this, "Yazınız.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Bir şeyler yaz.", Toast.LENGTH_SHORT).show();
 
         } else {
 
@@ -120,19 +121,19 @@ public class MainActivity extends AppCompatActivity {
 
                     Spannable spTodo = new SpannableString(todoNew);
                     String firstLetter = spTodo.subSequence(0,1).toString();
+                    String fiveLetter = spTodo.subSequence(0,5).toString();
 
                     String randId = randomId.randomUUID().toString();
                     String id = firstLetter + "-" +randId;
 
-                    String sort = creationDate + todoNew;
+                    String sortDate = dateTime.currentlyDateTime("yyyy.MM.dd HH:MM:ss");
 
-                    todoModel = new TodoModel(id, todoNew, creationDate, notifi, sort);
+                    todoModel = new TodoModel(id, todoNew, creationDate, notifi, sortDate, fiveLetter);
 
                     referenceTodo.child(id).setValue(todoModel);
 
                     editTodo.setText("");
                 }
-
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
 
@@ -145,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         rvTodo.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL, true); // VERTICAL, true: RecyclerView'e eklenen veri en alttan üste doğru eklenir.
         linearLayoutManager.setStackFromEnd(true); // RecyclerView'e eklenen veri sayfayı otomatik kaydırır.
-        rvTodo.setLayoutManager(linearLayoutManager);
+        rvTodo.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)/*linearLayoutManager*/);
 
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.desing_row_todo, null); // Satır tasarımı bağlandı.
@@ -171,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
                 Collections.sort(todoModelList, new Comparator<TodoModel>() { //RecyclerView A->Z sıralama
                     @Override
                     public int compare(TodoModel tdModel, TodoModel t1) {
-                        return t1.getSort().compareToIgnoreCase(tdModel.getSort());
+                        return tdModel.getSort().compareToIgnoreCase(t1.getSort());
                     }
                 });
 

@@ -7,28 +7,26 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constRow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/bg_todo_row"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".97">
 
         <TextView
             android:id="@+id/textRvDate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/actor"
-            android:gravity="right|center_vertical"
+            android:fontFamily="@font/baloo_bhai_2_medium"
+            android:gravity="center"
             android:paddingRight="10dp"
             android:text="TextView"
-            android:textColor="@color/burgundy"
+            android:textColor="@color/blue_grey"
             android:textSize="12dp"
-            app:layout_constraintBottom_toTopOf="@+id/constRvTodo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/constRvTodo"
@@ -38,58 +36,46 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constRvTodo"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_height="0dp"
+            android:foreground="?android:attr/selectableItemBackground"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/constAlarm"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textRvDate"
-            app:layout_constraintWidth_percent=".9">
+            app:layout_constraintTop_toBottomOf="@+id/textRvDate">
 
             <TextView
                 android:id="@+id/textRvTodo"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/actor"
+                android:layout_height="0dp"
+                android:fontFamily="@font/baloo_bhai_2_medium"
                 android:gravity="center_vertical"
                 android:inputType="textMultiLine"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:text="TextView"
-                android:textColor="@color/burgundy"
+                android:textColor="@color/blue_grey"
                 android:textSize="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgAlarm"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constAlarm"
-            android:layout_width="39dp"
-            android:layout_height="36dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/constRvTodo"
-            app:layout_constraintTop_toBottomOf="@+id/textRvDate">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent=".9" />
 
             <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
+                android:id="@+id/imgAlarm"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textRvTodo"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintWidth_percent=".1"
                 app:srcCompat="@drawable/ic_alarm" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

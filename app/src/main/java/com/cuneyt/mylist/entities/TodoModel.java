@@ -6,16 +6,18 @@ public class TodoModel {
     private String creationDate;
     private String notification;
     private String sort;
+    private String showLetter;
 
     public TodoModel() {
     }
 
-    public TodoModel(String id, String todo, String creationDate, String notification, String sort) {
+    public TodoModel(String id, String todo, String creationDate, String notification, String sort, String showLetter) {
         this.id = id;
         this.todo = todo;
         this.creationDate = creationDate;
         this.notification = notification;
         this.sort = sort;
+        this.showLetter = showLetter;
     }
 
     public String getId() {
@@ -56,5 +58,13 @@ public class TodoModel {
 
     public void setSort(String sort) {
         this.sort = sort;
+    }
+
+    public String getShowLetter() {
+        return showLetter;
+    }
+
+    public void setShowLetter(String showLetter) {
+        this.showLetter = showLetter;
     }
 }
